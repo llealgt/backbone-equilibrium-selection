@@ -361,7 +361,7 @@ Recomputes headline numbers from the result files and compares them with the pap
 result files every check must pass exactly.
 
 **Note on recomputation.** If the result files are deleted and Stages A-D are recomputed, every run that
-does not use LayerNorm is reproduced bit for bit (verified: 2,010 of 2,370 runs). The 360 runs of the
+does not use LayerNorm is reproduced bit for bit (verified: 1,980 of 2,460 runs). The 480 runs of the
 LayerNorm arms (`mlp+ln`, `attn+ln`, `attn+ln+pe`) are sensitive to the CPU and BLAS build: LayerNorm's
 mean and variance reductions round differently, and training amplifies that into the 3rd-4th decimal of
 those arms' results (for example `attn+ln` vs MLP on Kuhn: -0.0106, p=0.001 in the shipped files from
