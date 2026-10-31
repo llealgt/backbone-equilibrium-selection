@@ -1,0 +1,15 @@
+# files the notebook writes when it runs
+/efg.py
+/nbn.py
+/selstats.py
+/stageB.py
+/games2.py
+/stageC.py
+/stageD.py
+/environment.json
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+stageE/stageE_cache_s*.json
+*_cache_s*.json
+/fig*.png

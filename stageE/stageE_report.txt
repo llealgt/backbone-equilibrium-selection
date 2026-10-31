@@ -1,0 +1,29 @@
+STAGE E REGISTERED ANALYSIS
+
+runs present 4800 / 4800 registered
+
+H1  matched contrast attn_cap - mlp_lr012 (read-off, best-iterate gate)
+   kuhn          n=(400,400)/400  -0.00692 [-0.00954,-0.00431] p=2.662e-07
+   kuhn_dupcall  n=(400,400)/400  -0.00660 [-0.00930,-0.00389] p=1.992e-06
+   kuhn_dupp1    n=(400,400)/400  -0.00657 [-0.00943,-0.00371] p=7.476e-06
+   kuhn_dupbet   n=(400,400)/400  -0.01020 [-0.01288,-0.00752] p=2.226e-13
+   POOLED        -0.00760 [-0.00895,-0.00625] p=0  TOST(+-0.010) p=0.0002552
+   verdict: TRIVIALLY DIFFERENT   decision: SUPPORTED   (original post hoc estimate -0.00828)
+
+H2  kuhn_dupcall attention split vs exact 0.5
+   split_Q  n=400 mean=0.4722 [0.4661,0.4782] p=7.67e-18 Holm p=7.67e-18
+   split_K  n=400 mean=0.4632 [0.4574,0.4691] p=6.39e-30 Holm p=1.28e-29
+   decision: SUPPORTED
+
+Secondary family (Holm across S1-S4)
+   S1_kuhn_matched_lr012      -0.00692 [-0.00954,-0.00431] p=2.662e-07 Holm p=7.987e-07
+   S2_pooled_final_iterate    -0.00780 [-0.00935,-0.00626] p=0 Holm p=0
+   S3_kuhn_projection         -0.00691 [-0.00954,-0.00428] p=3.225e-07 Holm p=7.987e-07
+   S4_kuhn_matched_lr015      -0.00609 [-0.00889,-0.00329] p=2.232e-05 Holm p=2.232e-05
+   S5 MLP split TOST(+-0.020): {'split_Q': 0.0, 'split_K': 0.0}
+   S6 trained - untrained (paired):
+      mlp|split_Q        -0.0141 [-0.0312,+0.0030] p=0.106
+      mlp|split_K        -0.0096 [-0.0269,+0.0078] p=0.278
+      attn|split_Q       -0.0296 [-0.0413,-0.0179] p=9.59e-07
+      attn|split_K       -0.0414 [-0.0521,-0.0307] p=1.72e-13
+   H1 pooled under equicorrelation rho: {'0.0': '0', '0.3': '1.33e-15', '0.5': '3.18e-12', '0.7': '3.88e-10', '0.9': '1.01e-08'}

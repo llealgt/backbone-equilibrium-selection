@@ -1,0 +1,18 @@
+{
+ "cache_file": "stageE_cache.json",
+ "blocks": [
+  {"name": "H1", "games": ["kuhn", "kuhn_dupcall", "kuhn_dupp1", "kuhn_dupbet"],
+   "arms": ["mlp_lr012", "attn_cap"], "seed_start": 50000, "n_per_arm": 400},
+  {"name": "H2", "games": ["kuhn_dupcall"], "arms": ["mlp", "attn"], "seed_start": 60000, "n_per_arm": 400},
+  {"name": "S4", "games": ["kuhn"], "arms": ["mlp", "attn_cap15"], "seed_start": 70000, "n_per_arm": 400}
+ ],
+ "analysis": {
+  "conv_thresh": 0.02,
+  "h1": {"block": "H1", "games": ["kuhn", "kuhn_dupcall", "kuhn_dupp1", "kuhn_dupbet"],
+         "mlp_arm": "mlp_lr012", "attn_arm": "attn_cap", "margin": 0.010, "alpha": 0.025,
+         "original_estimate": -0.00828},
+  "h2": {"block": "H2", "game": "kuhn_dupcall", "coords": ["split_Q", "split_K"],
+         "mlp_arm": "mlp", "attn_arm": "attn", "alpha": 0.025, "mlp_split_margin": 0.02},
+  "s4": {"block": "S4", "mlp_arm": "mlp", "attn_arm": "attn_cap15"}
+ }
+}

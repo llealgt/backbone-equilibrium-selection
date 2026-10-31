@@ -1,0 +1,22 @@
+sáb 31 oct 2026 19:09:30 UTC
+launching 18 shards over 4800 registered jobs
+shard 16 done (3027s)
+shard 9 done (3029s)
+shard 17 done (3029s)
+shard 15 done (3031s)
+shard 13 done (3032s)
+shard 12 done (3035s)
+shard 14 done (3037s)
+shard 11 done (3037s)
+shard 10 done (3039s)
+shard 0 done (3039s)
+shard 5 done (3040s)
+shard 8 done (3041s)
+shard 1 done (3043s)
+shard 3 done (3043s)
+shard 4 done (3044s)
+shard 6 done (3044s)
+shard 7 done (3047s)
+shard 2 done (3048s)
+merged -> stageE_cache.json : 4800 runs, 0 missing
+sáb 31 oct 2026 20:00:19 UTC

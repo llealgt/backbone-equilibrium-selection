@@ -1,0 +1,24 @@
+H1 per-game SDs from Stage D (mlp_lr012, attn_cap):
+   kuhn          sd_mlp=0.0158 (n=150)  sd_attn=0.0245 (n=150)
+   kuhn_dupcall  sd_mlp=0.0145 (n=40)  sd_attn=0.0255 (n=40)
+   kuhn_dupp1    sd_mlp=0.0150 (n=40)  sd_attn=0.0223 (n=40)
+   kuhn_dupbet   sd_mlp=0.0151 (n=40)  sd_attn=0.0253 (n=40)
+
+H1 power at SESOI=0.004, alpha=0.025 two-sided:
+   n/arm/game  power(rho=0)  power(rho=0.5)  pooled SE
+   100         0.709         0.318           0.00143
+   150         0.881         0.469           0.00117
+   200         0.956         0.602           0.00101
+   250         0.985         0.710           0.00091
+   300         0.995         0.794           0.00083
+   400         1.000         0.902           0.00072
+
+H2 SDs from Stage C (attn, kuhn_dupcall, n=80):
+   split_Q  mean=0.4626 sd=0.0564 n=80
+   split_K  mean=0.4486 sd=0.0891 n=80
+
+H2 power per coordinate at SESOI=0.020, alpha=0.0125 two-sided:
+   n=80   split_Q 0.729  split_K 0.298
+   n=100  split_Q 0.839  split_K 0.387
+   n=150  split_Q 0.964  split_K 0.589
+   n=200  split_Q 0.993  split_K 0.743
